@@ -1,0 +1,14 @@
+prefix=/home/rjacober/src/github/docker/ffmpeg-windows-build-helpers/sandbox/FFmpeg/build/win64
+exec_prefix=${prefix}
+libdir=/home/rjacober/src/github/docker/ffmpeg-windows-build-helpers/sandbox/FFmpeg/build/win64/lib
+includedir=/home/rjacober/src/github/docker/ffmpeg-windows-build-helpers/sandbox/FFmpeg/build/win64/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.31.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -lm -luser32 -lbcrypt
+Cflags: -I${includedir}
